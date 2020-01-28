@@ -6,7 +6,7 @@ START = dt.datetime(2010, 1, 1)
 END = dt.datetime.today()
 # ------------Run Program----------------------#
 if __name__ == '__main__':
-    #BUILD ^DJI PORTFOLIO
+    #Dow Jones Industrial Average (^DJI)
     DJI = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO',
            'KO', 'XOM', 'GS', 'HD', 'IBM', 'INTC', 'JNJ',
            'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG',
@@ -14,11 +14,11 @@ if __name__ == '__main__':
            '^DJI'
            ]
 
-    SELECTED_YEAR = 2015 # This takes >=
+    SELECTED_YEAR = 2015 # Historical data are from 2010 but we are interested with data from January 2015 to January 2020
     DJI_BM_SYM = DJI[-1]
     main(DJI, DJI_BM_SYM, SELECTED_YEAR, risk_free=0.015, start=START, end=END, download=False)
 
-    #BUILD ^OMX PORTFOLIO
+    #OMX Stockholm 30 Index (^OMX)
     OMX = ['TELIA.ST', 'ERIC-B.ST', 'VOLV-B.ST', 'SEB-A.ST',
            'SWED-A.ST', 'SHB-A.ST', 'SAND.ST', 'HM-B.ST',
            'ABB.ST', 'ATCO-A.ST', 'INVE-B.ST', 'ATCO-B.ST', 'STE-R.ST',
