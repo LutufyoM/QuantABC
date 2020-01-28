@@ -98,18 +98,4 @@ class Frontier(Initialize):
 
     def efficint_frontier(self):
         "A function to create an efficent frontier"
-        _, min_mu, _, _ = self.global_min_variance()
-        _, max_mu, _, _ = self.max_sharpe_ratio()
-        targets = [
-            min_mu-(min_mu*0.20) + i*(max_mu-min_mu*0.70)/100  for i in range(100)
-            ]
-        frontier_values = []
-        for target in targets:
-            weights, _, _, _ = self.efficint_return(target)
-            frontier_values.append(
-                [
-                    self.performance(weights)[1], target
-                    ]
-                )
-        self.efrontier = np.array(frontier_values)
         return self.efrontier
